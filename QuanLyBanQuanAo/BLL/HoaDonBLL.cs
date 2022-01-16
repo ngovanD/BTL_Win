@@ -58,7 +58,7 @@ namespace BLL
                 ThoiGian = hd.ThoiGian,
                 MaNV = hd.TaiKhoan.NhanViens.FirstOrDefault().MaNhanVien,
                 HoTenNV = hd.TaiKhoan.NhanViens.FirstOrDefault().HoTen,
-                KhuyenMai = 10,
+                KhuyenMai = hd.GiamGia,
                 TongTien = hd.TongTien
             }).ToList();
             lblTongHD.Text = dsHD.Count().ToString();
@@ -92,7 +92,7 @@ namespace BLL
             return HoaDonDAL.Instance.LayTheoMa(maHD);
         }
 
-        public List<ChiTietHoaDonDTO> LayChiTietHoaDon(string maHD, bool status)
+        public List<ChiTietHoaDonDTO> LayChiTietHoaDon(string maHD)
         {
             var dongHoaDons = HoaDonDAL.Instance.LayTheoMa(maHD).DongHoaDons;
             List<ChiTietHoaDonDTO> dsCTHD = new List<ChiTietHoaDonDTO>();
@@ -102,21 +102,11 @@ namespace BLL
                 {
                     SoLuong = dhd.SoLuong,
                 };
-
-                if (status)
-                {
-                    var kt = KichThuocDAL.Instance.LayTheoMa(dhd.ID_KichThuoc);
-                    var sp = SanPhamDAL.Instance.LayTheoMa(dhd.MaSanPham);
-                    cthd.TenSP = sp.TenSanPham;
-                    cthd.DonGiaBan = sp.DonGiaBan;
-                    cthd.Size = kt.Ten;
-                }
-                else
-                {
-                    cthd.TenSP = dhd.SanPham.TenSanPham;
-                    cthd.Size = dhd.KichThuoc.Ten;
-                    cthd.DonGiaBan = dhd.SanPham.DonGiaBan;
-                }
+                var kt = KichThuocDAL.Instance.LayTheoMa(dhd.ID_KichThuoc);
+                var sp = SanPhamDAL.Instance.LayTheoMa(dhd.MaSanPham);
+                cthd.TenSP = sp.TenSanPham;
+                cthd.DonGiaBan = sp.DonGiaBan;
+                cthd.Size = kt.Ten;
                 dsCTHD.Add(cthd);
             }
 
@@ -403,7 +393,8 @@ namespace BLL
             {
                 HoaDonDAL.Instance.LuuHoaDon(hoaDon, chiTietHoaDon);
                 ChiTietSanPhamDAL.Instance.CapNhatDS(chiTietSanPhams);
-
+                khuyenMai.SoLuongCon--;
+                KhuyenMaiDAL.Instance.SuaKhuyenMai(khuyenMai);
                 return true;
             }
             catch (Exception ex)

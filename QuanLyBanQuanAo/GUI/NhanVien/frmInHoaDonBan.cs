@@ -40,7 +40,7 @@ namespace GUI.NhanVien
             rpvXemHoaDon.RefreshReport();
 
             HoaDon hd = HoaDonBLL.Instance.LayHoaDonTheoMa(maHD);
-            List<ChiTietHoaDonDTO> cthd = HoaDonBLL.Instance.LayChiTietHoaDon(maHD, status);
+            List<ChiTietHoaDonDTO> cthd = HoaDonBLL.Instance.LayChiTietHoaDon(maHD);
 
             //this.rpvXemHoaDon.LocalReport.ReportPath = "D:/MONHOC/WINDOWS/BTL/BTL_Windows-dang/QuanLyBanQuanAo/GUI/NhanVien/rptInHoaDonBan.rdlc";
 
