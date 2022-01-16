@@ -46,6 +46,9 @@ namespace GUI
             this.btnSua = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.rbnNam = new System.Windows.Forms.RadioButton();
+            this.rbnNu = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -78,7 +81,7 @@ namespace GUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(85, 174);
+            this.label4.Location = new System.Drawing.Point(85, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 3;
@@ -87,7 +90,7 @@ namespace GUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 208);
+            this.label5.Location = new System.Drawing.Point(85, 230);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 4;
@@ -96,7 +99,7 @@ namespace GUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(85, 246);
+            this.label6.Location = new System.Drawing.Point(85, 268);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 13);
             this.label6.TabIndex = 5;
@@ -129,14 +132,14 @@ namespace GUI
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(205, 171);
+            this.txtDiaChi.Location = new System.Drawing.Point(205, 193);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(268, 20);
             this.txtDiaChi.TabIndex = 6;
             // 
             // txtSoDienThoai
             // 
-            this.txtSoDienThoai.Location = new System.Drawing.Point(205, 205);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(205, 227);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(268, 20);
             this.txtSoDienThoai.TabIndex = 6;
@@ -144,7 +147,7 @@ namespace GUI
             // txtLuongThangNay
             // 
             this.txtLuongThangNay.Enabled = false;
-            this.txtLuongThangNay.Location = new System.Drawing.Point(205, 243);
+            this.txtLuongThangNay.Location = new System.Drawing.Point(205, 265);
             this.txtLuongThangNay.Name = "txtLuongThangNay";
             this.txtLuongThangNay.ReadOnly = true;
             this.txtLuongThangNay.Size = new System.Drawing.Size(268, 20);
@@ -152,7 +155,7 @@ namespace GUI
             // 
             // btnDoiMatKhau
             // 
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(265, 299);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(265, 321);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.Size = new System.Drawing.Size(106, 23);
             this.btnDoiMatKhau.TabIndex = 7;
@@ -162,7 +165,7 @@ namespace GUI
             // 
             // btnTroVe
             // 
-            this.btnTroVe.Location = new System.Drawing.Point(398, 299);
+            this.btnTroVe.Location = new System.Drawing.Point(398, 321);
             this.btnTroVe.Name = "btnTroVe";
             this.btnTroVe.Size = new System.Drawing.Size(75, 23);
             this.btnTroVe.TabIndex = 8;
@@ -172,7 +175,7 @@ namespace GUI
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(170, 299);
+            this.btnSua.Location = new System.Drawing.Point(170, 321);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 9;
@@ -198,11 +201,45 @@ namespace GUI
             this.dtpNgaySinh.Size = new System.Drawing.Size(96, 20);
             this.dtpNgaySinh.TabIndex = 11;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(85, 166);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Giới tính:";
+            // 
+            // rbnNam
+            // 
+            this.rbnNam.AutoSize = true;
+            this.rbnNam.Location = new System.Drawing.Point(205, 164);
+            this.rbnNam.Name = "rbnNam";
+            this.rbnNam.Size = new System.Drawing.Size(47, 17);
+            this.rbnNam.TabIndex = 13;
+            this.rbnNam.TabStop = true;
+            this.rbnNam.Text = "Nam";
+            this.rbnNam.UseVisualStyleBackColor = true;
+            // 
+            // rbnNu
+            // 
+            this.rbnNu.AutoSize = true;
+            this.rbnNu.Location = new System.Drawing.Point(265, 164);
+            this.rbnNu.Name = "rbnNu";
+            this.rbnNu.Size = new System.Drawing.Size(39, 17);
+            this.rbnNu.TabIndex = 14;
+            this.rbnNu.TabStop = true;
+            this.rbnNu.Text = "Nữ";
+            this.rbnNu.UseVisualStyleBackColor = true;
+            // 
             // frmThongTinTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 350);
+            this.ClientSize = new System.Drawing.Size(552, 375);
+            this.Controls.Add(this.rbnNu);
+            this.Controls.Add(this.rbnNam);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.dtpNgaySinh);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSua);
@@ -220,6 +257,8 @@ namespace GUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmThongTinTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin tài khoản";
@@ -248,5 +287,8 @@ namespace GUI
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RadioButton rbnNam;
+        private System.Windows.Forms.RadioButton rbnNu;
     }
 }

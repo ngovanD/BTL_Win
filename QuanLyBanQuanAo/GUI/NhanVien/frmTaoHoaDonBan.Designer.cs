@@ -30,14 +30,14 @@ namespace GUI.NhanVien
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -124,9 +124,9 @@ namespace GUI.NhanVien
             // DonGia
             // 
             this.DonGia.DataPropertyName = "DonGia";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "#,### đ";
-            this.DonGia.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "#,### đ";
+            this.DonGia.DefaultCellStyle = dataGridViewCellStyle1;
             this.DonGia.HeaderText = "Đơn giá";
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
@@ -308,8 +308,8 @@ namespace GUI.NhanVien
             // SoLuongMua
             // 
             this.SoLuongMua.DataPropertyName = "SoLuongMua";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SoLuongMua.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SoLuongMua.DefaultCellStyle = dataGridViewCellStyle2;
             this.SoLuongMua.HeaderText = "Số lượng";
             this.SoLuongMua.Name = "SoLuongMua";
             this.SoLuongMua.ReadOnly = true;
@@ -348,8 +348,8 @@ namespace GUI.NhanVien
             // MaSP
             // 
             this.MaSP.DataPropertyName = "MaSP";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.MaSP.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MaSP.DefaultCellStyle = dataGridViewCellStyle3;
             this.MaSP.HeaderText = "Mã SP";
             this.MaSP.Name = "MaSP";
             this.MaSP.ReadOnly = true;
@@ -375,8 +375,8 @@ namespace GUI.NhanVien
             // KichThuoc
             // 
             this.KichThuoc.DataPropertyName = "Size";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.KichThuoc.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.KichThuoc.DefaultCellStyle = dataGridViewCellStyle4;
             this.KichThuoc.HeaderText = "Size";
             this.KichThuoc.Name = "KichThuoc";
             this.KichThuoc.ReadOnly = true;
@@ -385,9 +385,9 @@ namespace GUI.NhanVien
             // ThanhTien
             // 
             this.ThanhTien.DataPropertyName = "ThanhTien";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Format = "#,### đ";
-            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "#,### đ";
+            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle5;
             this.ThanhTien.HeaderText = "Thành tiền";
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
@@ -464,8 +464,8 @@ namespace GUI.NhanVien
             // MaSanPham
             // 
             this.MaSanPham.DataPropertyName = "MaSanPham";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.MaSanPham.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MaSanPham.DefaultCellStyle = dataGridViewCellStyle6;
             this.MaSanPham.HeaderText = "Mã SP";
             this.MaSanPham.Name = "MaSanPham";
             this.MaSanPham.ReadOnly = true;
@@ -489,8 +489,8 @@ namespace GUI.NhanVien
             // SoLuongCo
             // 
             this.SoLuongCo.DataPropertyName = "SoLuongCo";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SoLuongCo.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SoLuongCo.DefaultCellStyle = dataGridViewCellStyle7;
             this.SoLuongCo.HeaderText = "Số lượng có";
             this.SoLuongCo.Name = "SoLuongCo";
             this.SoLuongCo.ReadOnly = true;
@@ -499,10 +499,10 @@ namespace GUI.NhanVien
             // GiaBan
             // 
             this.GiaBan.DataPropertyName = "DonGiaBan";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.Format = "#,### đ";
-            dataGridViewCellStyle16.NullValue = null;
-            this.GiaBan.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "#,### đ";
+            dataGridViewCellStyle8.NullValue = null;
+            this.GiaBan.DefaultCellStyle = dataGridViewCellStyle8;
             this.GiaBan.HeaderText = "Giá bán";
             this.GiaBan.Name = "GiaBan";
             this.GiaBan.ReadOnly = true;
@@ -895,6 +895,8 @@ namespace GUI.NhanVien
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmTaoHoaDonBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTaoHoaDonBan";

@@ -393,8 +393,14 @@ namespace BLL
             {
                 HoaDonDAL.Instance.LuuHoaDon(hoaDon, chiTietHoaDon);
                 ChiTietSanPhamDAL.Instance.CapNhatDS(chiTietSanPhams);
-                khuyenMai.SoLuongCon--;
-                KhuyenMaiDAL.Instance.SuaKhuyenMai(khuyenMai);
+                if(khuyenMai !=null)
+                {
+                    khuyenMai.SoLuongCon--;
+                    KhuyenMaiDAL.Instance.SuaKhuyenMai(khuyenMai);
+                }
+
+                LuongBLL.Instance.CapNhatThuong(tk.ID, hoaDon.TongTien);
+
                 return true;
             }
             catch (Exception ex)

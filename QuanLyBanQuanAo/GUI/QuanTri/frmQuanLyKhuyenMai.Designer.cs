@@ -254,6 +254,8 @@ namespace GUI.QuanTri
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTroLai);
             this.Controls.Add(this.btnTim);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmQuanLyKhuyenMai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý khuyến mại";

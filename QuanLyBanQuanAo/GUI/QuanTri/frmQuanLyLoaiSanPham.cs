@@ -59,6 +59,11 @@ namespace GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn thay đổi thông tin này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.Cancel)
+            {
+                return;
+            }
             selectRow = dtgvDanhSachLoaiSanPham.CurrentRow.Index;
             LoaiSanPham loaiSanPham = new LoaiSanPham();
             loaiSanPham.MaLoaiSanPham = int.Parse(dtgvDanhSachLoaiSanPham.Rows[selectRow].Cells["MaLoaiSanPham"].Value.ToString());
@@ -80,6 +85,11 @@ namespace GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn xóa thông tin này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.Cancel)
+            {
+                return;
+            }
             selectRow = dtgvDanhSachLoaiSanPham.CurrentRow.Index;
             int maLoaiSanPham = int.Parse(dtgvDanhSachLoaiSanPham.Rows[selectRow].Cells["MaLoaiSanPham"].Value.ToString());
             try

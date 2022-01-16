@@ -26,7 +26,7 @@ namespace DAL
         public Luong LayThongTinLuong(int ID, string thangNam)
         {
             var luong = db.Luongs.AsEnumerable()
-                                .Where(l => l.MaNhanVien == ID && String.Format("MM/yyyy", l.ThangNam) == String.Format("MM/yyyy", thangNam))
+                                .Where(l => l.MaNhanVien == ID && l.ThangNam.Value.Month == DateTime.Now.Month && l.ThangNam.Value.Year == DateTime.Now.Year)
                                 .FirstOrDefault();
             return luong;
         }
@@ -88,6 +88,21 @@ namespace DAL
                             Luong = l.SoNgayCong * l.LuongCoBanNgay + l.Thuong
                         }).ToList();
             return (int)list.Sum(l => l.Luong);
+        }
+
+        public void CapNhatThuong(int idTk, int TongTien)
+        {
+            var nhanVien = (from nv in db.NhanViens
+                            where nv.IdTK == idTk
+                            select nv).FirstOrDefault();
+            var luong = (from l in db.Luongs
+                         where l.MaNhanVien == nhanVien.ID && l.ThangNam.Value.Month == DateTime.Now.Month && l.ThangNam.Value.Year == DateTime.Now.Year
+                         select l).FirstOrDefault();
+
+            luong.Thuong += (int)(0.01 * TongTien);
+
+            db.SaveChanges();
+
         }
     }
 }

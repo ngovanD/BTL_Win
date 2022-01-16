@@ -277,7 +277,7 @@ namespace GUI.QuanTri
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(74, 28);
             this.btnThanhToan.TabIndex = 2;
-            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.Text = "Lưu";
             this.btnThanhToan.UseVisualStyleBackColor = true;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
@@ -642,6 +642,8 @@ namespace GUI.QuanTri
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmTaoHoaDonNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTaoHoaDonNhap";

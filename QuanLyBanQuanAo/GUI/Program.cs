@@ -25,6 +25,7 @@ namespace GUI
             //Application.Run(new NhanVien.frmTaoHoaDonBan());
             //Application.Run(new QuanTri.frmQuanLySanPham());
             Application.Run(new frmDangNhap());
+
         }
     }
 }

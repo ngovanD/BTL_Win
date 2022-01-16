@@ -65,6 +65,11 @@ namespace GUI.QuanTri
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn thay đổi thông tin này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.Cancel)
+            {
+                return;
+            }
             selectRow = dtgvDanhSachKhuyenMai.CurrentRow.Index;
             KhuyenMai khuyenMai = new KhuyenMai();
             khuyenMai.MaKhuyenMai = int.Parse(dtgvDanhSachKhuyenMai.Rows[selectRow].Cells["MaKhuyenMai"].Value.ToString());
@@ -88,6 +93,11 @@ namespace GUI.QuanTri
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn xóa thông tin này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.Cancel)
+            {
+                return;
+            }
             selectRow = dtgvDanhSachKhuyenMai.CurrentRow.Index;
             int maKhuyeMai = int.Parse(dtgvDanhSachKhuyenMai.Rows[selectRow].Cells["MaKhuyenMai"].Value.ToString());
             try

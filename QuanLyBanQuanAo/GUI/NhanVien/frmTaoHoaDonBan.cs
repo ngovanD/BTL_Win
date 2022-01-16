@@ -216,6 +216,7 @@ namespace GUI.NhanVien
                 HoaDonBLL.Instance.HienThiSanPham(dgvDanhSachSanPham, null, 0);
                 dgvDanhSachSanPham.ClearSelection();
                 HienThiMacDinh();
+                txtMaGiamGia.Text = "";
             }
         }
 

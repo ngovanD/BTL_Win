@@ -22,9 +22,13 @@ namespace GUI
 
         private void DangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hide();
-            new frmDangNhap().ShowDialog();
-            Close();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn đăng xuất", "Thông báo", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                Hide();
+                new frmDangNhap().ShowDialog();
+                this.Close();
+            }
         }
 
         private void TaoHoaDonToolStripMenuItem_Click(object sender, EventArgs e)

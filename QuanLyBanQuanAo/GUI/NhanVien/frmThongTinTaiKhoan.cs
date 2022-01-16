@@ -29,10 +29,23 @@ namespace GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn thay đổi thông tin này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.Cancel)
+            {
+                return;
+            }
             TaiKhoan taiKhoan = TaiKhoanBLL.Instance.LayThongTinTaiKhoan(tenDangNhap);
             DTO.NhanVien nhanVien = NhanVienBLL.Instance.LayThongTinNhanVien(taiKhoan.ID);
             nhanVien.HoTen = txtHoTen.Text;
             nhanVien.DiaChi = txtDiaChi.Text;
+            if(rbnNam.Checked)
+            {
+                nhanVien.GioiTinh = "Nam";
+            }
+            else
+            {
+                nhanVien.GioiTinh = "Nữ";
+            }
             nhanVien.SoDienThoai = txtSoDienThoai.Text;
             string ngaySinh = dtpNgaySinh.Value.ToString("dd/MM/yyyy");
             nhanVien.NgaySinh = DateTime.ParseExact(ngaySinh, "dd/MM/yyyy", null);
@@ -58,6 +71,14 @@ namespace GUI
             txtLoaiTaiKhoan.Text = (bool)taiKhoan.LoaiTaiKhoan == true ? "Nhân viên" : "Quản lý";
             txtHoTen.Text = nhanVien.HoTen;
             dtpNgaySinh.Text = nhanVien.NgaySinh.ToString();
+            if(nhanVien.GioiTinh == "Nam")
+            {
+                rbnNam.Checked = true;
+            }    
+            else
+            {
+                rbnNu.Checked = true;
+            }    
             txtDiaChi.Text = nhanVien.DiaChi;
             txtSoDienThoai.Text = nhanVien.SoDienThoai;
             txtLuongThangNay.Text = (luong.SoNgayCong*luong.LuongCoBanNgay+luong.Thuong).ToString() + "VND";

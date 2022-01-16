@@ -23,6 +23,12 @@ namespace GUI.NhanVien
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn thay đổi thông tin này không", "Thông báo", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.Cancel)
+            {
+                return;
+            }
+
             TaiKhoan taiKhoan = TaiKhoanBLL.Instance.LayThongTinTaiKhoan(tenDangNhap);
             bool matKhauCu = TaiKhoanBLL.Instance.KiemTraTaiKhoan(tenDangNhap, txtMatKhauCu.Text);
 

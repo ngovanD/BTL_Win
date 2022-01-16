@@ -177,6 +177,8 @@ namespace GUI
             this.Controls.Add(this.txtMaLoaiSanPham);
             this.Controls.Add(this.txtTenLoaiSanPham);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmQuanLyLoaiSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý loại sản phẩm";

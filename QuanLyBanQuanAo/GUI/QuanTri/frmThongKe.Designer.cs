@@ -136,18 +136,21 @@ namespace GUI.QuanTri
             this.MaHoaDon.DataPropertyName = "MaHoaDon";
             this.MaHoaDon.HeaderText = "Mã hóa đơn";
             this.MaHoaDon.Name = "MaHoaDon";
+            this.MaHoaDon.ReadOnly = true;
             // 
             // NgayTao
             // 
             this.NgayTao.DataPropertyName = "ThoiGian";
             this.NgayTao.HeaderText = "Ngày tạo";
             this.NgayTao.Name = "NgayTao";
+            this.NgayTao.ReadOnly = true;
             // 
             // TongTien
             // 
             this.TongTien.DataPropertyName = "TongTien";
             this.TongTien.HeaderText = "Tổng tiền";
             this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
             // 
             // label5
             // 
@@ -177,24 +180,28 @@ namespace GUI.QuanTri
             this.MaHoaDonBan.DataPropertyName = "MaHoaDon";
             this.MaHoaDonBan.HeaderText = "Mã hóa đơn";
             this.MaHoaDonBan.Name = "MaHoaDonBan";
+            this.MaHoaDonBan.ReadOnly = true;
             // 
             // NgayBan
             // 
             this.NgayBan.DataPropertyName = "ThoiGian";
             this.NgayBan.HeaderText = "Ngày tạo";
             this.NgayBan.Name = "NgayBan";
+            this.NgayBan.ReadOnly = true;
             // 
             // TongTienBan
             // 
             this.TongTienBan.DataPropertyName = "TongTien";
             this.TongTienBan.HeaderText = "Tổng tiền";
             this.TongTienBan.Name = "TongTienBan";
+            this.TongTienBan.ReadOnly = true;
             // 
             // NhanVienBan
             // 
             this.NhanVienBan.DataPropertyName = "TenNhanVien";
             this.NhanVienBan.HeaderText = "Nhân viên bán";
             this.NhanVienBan.Name = "NhanVienBan";
+            this.NhanVienBan.ReadOnly = true;
             // 
             // label6
             // 
@@ -258,24 +265,28 @@ namespace GUI.QuanTri
             this.MaNhanVien.DataPropertyName = "MaNhanVien";
             this.MaNhanVien.HeaderText = "Mã nhân viên";
             this.MaNhanVien.Name = "MaNhanVien";
+            this.MaNhanVien.ReadOnly = true;
             // 
             // HoTen
             // 
             this.HoTen.DataPropertyName = "HoTen";
             this.HoTen.HeaderText = "Họ tên";
             this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
             // 
             // SoNgayCong
             // 
             this.SoNgayCong.DataPropertyName = "SoNgayCong";
             this.SoNgayCong.HeaderText = "Số ngày công";
             this.SoNgayCong.Name = "SoNgayCong";
+            this.SoNgayCong.ReadOnly = true;
             // 
             // Luong
             // 
             this.Luong.DataPropertyName = "Luong";
             this.Luong.HeaderText = "Lương";
             this.Luong.Name = "Luong";
+            this.Luong.ReadOnly = true;
             // 
             // label2
             // 
@@ -409,6 +420,8 @@ namespace GUI.QuanTri
             this.Controls.Add(this.cmbHoaDonThang);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmThongKe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê";

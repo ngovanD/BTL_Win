@@ -62,14 +62,14 @@ namespace GUI
             // XemThongTinToolStripMenuItem
             // 
             this.XemThongTinToolStripMenuItem.Name = "XemThongTinToolStripMenuItem";
-            this.XemThongTinToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.XemThongTinToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.XemThongTinToolStripMenuItem.Text = "Xem thông tin";
             this.XemThongTinToolStripMenuItem.Click += new System.EventHandler(this.XemThongTinToolStripMenuItem_Click);
             // 
             // DangXuatToolStripMenuItem
             // 
             this.DangXuatToolStripMenuItem.Name = "DangXuatToolStripMenuItem";
-            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.DangXuatToolStripMenuItem.Text = "Đăng xuất";
             this.DangXuatToolStripMenuItem.Click += new System.EventHandler(this.DangXuatToolStripMenuItem_Click);
             // 
@@ -85,14 +85,14 @@ namespace GUI
             // TaoHoaDonToolStripMenuItem
             // 
             this.TaoHoaDonToolStripMenuItem.Name = "TaoHoaDonToolStripMenuItem";
-            this.TaoHoaDonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.TaoHoaDonToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.TaoHoaDonToolStripMenuItem.Text = "Tạo hóa đơn";
             this.TaoHoaDonToolStripMenuItem.Click += new System.EventHandler(this.TaoHoaDonToolStripMenuItem_Click);
             // 
             // lịchSửTạoToolStripMenuItem
             // 
             this.lịchSửTạoToolStripMenuItem.Name = "lịchSửTạoToolStripMenuItem";
-            this.lịchSửTạoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lịchSửTạoToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.lịchSửTạoToolStripMenuItem.Text = "Lịch sử tạo";
             this.lịchSửTạoToolStripMenuItem.Click += new System.EventHandler(this.lịchSửTạoToolStripMenuItem_Click);
             // 
@@ -102,7 +102,9 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "frmNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân viên";

@@ -40,9 +40,13 @@ namespace GUI
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hide();
-            new frmDangNhap().ShowDialog();
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn đăng xuất", "Thông báo", MessageBoxButtons.OKCancel);
+            if(dialogResult == DialogResult.OK)
+            {
+                Hide();
+                new frmDangNhap().ShowDialog();
+                this.Close();
+            }    
         }
 
         private void khuyếnMạiToolStripMenuItem_Click(object sender, EventArgs e)
