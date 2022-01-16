@@ -29,9 +29,9 @@ namespace GUI.QuanTri
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbxMaNhanVien = new System.Windows.Forms.ComboBox();
@@ -330,9 +330,9 @@ namespace GUI.QuanTri
             // ThoiGian
             // 
             this.ThoiGian.DataPropertyName = "ThoiGian";
-            dataGridViewCellStyle1.Format = "G";
-            dataGridViewCellStyle1.NullValue = "dd/MM/yyyy HH:mm:ss";
-            this.ThoiGian.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Format = "G";
+            dataGridViewCellStyle4.NullValue = "dd/MM/yyyy HH:mm:ss";
+            this.ThoiGian.DefaultCellStyle = dataGridViewCellStyle4;
             this.ThoiGian.HeaderText = "Thời gian";
             this.ThoiGian.Name = "ThoiGian";
             this.ThoiGian.ReadOnly = true;
@@ -356,9 +356,9 @@ namespace GUI.QuanTri
             // KhuyenMai
             // 
             this.KhuyenMai.DataPropertyName = "KhuyenMai";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "#,##0 đ";
-            this.KhuyenMai.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "#,##0 đ";
+            this.KhuyenMai.DefaultCellStyle = dataGridViewCellStyle5;
             this.KhuyenMai.HeaderText = "Khuyến mại";
             this.KhuyenMai.Name = "KhuyenMai";
             this.KhuyenMai.ReadOnly = true;
@@ -366,9 +366,9 @@ namespace GUI.QuanTri
             // TongTien
             // 
             this.TongTien.DataPropertyName = "TongTien";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "#,### đ";
-            this.TongTien.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "#,### đ";
+            this.TongTien.DefaultCellStyle = dataGridViewCellStyle6;
             this.TongTien.HeaderText = "Tổng tiền";
             this.TongTien.Name = "TongTien";
             this.TongTien.ReadOnly = true;
@@ -384,7 +384,7 @@ namespace GUI.QuanTri
             this.MaximizeBox = false;
             this.Name = "frmXemThongTinHoaDonBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmXemThongTinHoaDonBan";
+            this.Text = "Xem thông tin hóa đơn bán";
             this.Load += new System.EventHandler(this.frmXemThongTinHoaDonBan_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

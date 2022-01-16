@@ -899,7 +899,7 @@ namespace GUI.NhanVien
             this.MaximizeBox = false;
             this.Name = "frmTaoHoaDonBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTaoHoaDonBan";
+            this.Text = "Tạo hóa đơn  bán";
             this.Load += new System.EventHandler(this.frmTaoHoaDonBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             this.groupBox3.ResumeLayout(false);

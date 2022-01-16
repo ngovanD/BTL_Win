@@ -221,7 +221,7 @@ namespace GUI.QuanTri
             this.lblThoiGian.Padding = new System.Windows.Forms.Padding(2);
             this.lblThoiGian.Size = new System.Drawing.Size(542, 28);
             this.lblThoiGian.TabIndex = 3;
-            this.lblThoiGian.Text = "Chưa có";
+            this.lblThoiGian.Text = "Tạo hóa đơn nhập";
             this.lblThoiGian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label15
@@ -646,7 +646,7 @@ namespace GUI.QuanTri
             this.MaximizeBox = false;
             this.Name = "frmTaoHoaDonNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTaoHoaDonNhap";
+            this.Text = "Tạo hóa đơn nhập";
             this.Load += new System.EventHandler(this.frmTaoHoaDonNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudSLNhap)).EndInit();
             this.groupBox4.ResumeLayout(false);

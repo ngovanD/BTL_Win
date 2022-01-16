@@ -155,10 +155,10 @@
     <Compile Include="QuanTri\frmThongKe.Designer.cs">
       <DependentUpon>frmThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanTri\frmXemThongTinHoaDonBan.cs">
+    <Compile Include="NhanVien\frmXemThongTinHoaDonBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanTri\frmXemThongTinHoaDonBan.Designer.cs">
+    <Compile Include="NhanVien\frmXemThongTinHoaDonBan.Designer.cs">
       <DependentUpon>frmXemThongTinHoaDonBan.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -213,7 +213,7 @@
     <EmbeddedResource Include="QuanTri\frmThongKe.resx">
       <DependentUpon>frmThongKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanTri\frmXemThongTinHoaDonBan.resx">
+    <EmbeddedResource Include="NhanVien\frmXemThongTinHoaDonBan.resx">
       <DependentUpon>frmXemThongTinHoaDonBan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -40,7 +40,7 @@ namespace GUI.QuanTri
  
             dtgvDanhSachLuong.DataSource = danhSachLuong;
 
-            lblTongLuong.Text = LuongBLL.Instance.LayTongLuong(thang, nam).ToString();
+            lblTongLuong.Text = LuongBLL.Instance.LayTongLuong(thang, nam).ToString("#,### đ");
         }
 
         private void LoadDanhSachHoaDonBan()
@@ -50,7 +50,7 @@ namespace GUI.QuanTri
             var danhSachHoaDonBan = HoaDonBLL.Instance.LayDanhSachHoaDonBan(thang, nam);
 
             dtgvDanhSachHoaDonBan.DataSource = danhSachHoaDonBan;
-            lblTongTienBan.Text = HoaDonBLL.Instance.LayTongTienBan(thang, nam).ToString();
+            lblTongTienBan.Text = HoaDonBLL.Instance.LayTongTienBan(thang, nam).ToString("#,### đ");
         }
 
         private void LoadDanhSachHoaDonNhap()
@@ -60,7 +60,7 @@ namespace GUI.QuanTri
             var danhSachHoaDonNhap = HoaDonBLL.Instance.LayDanhSachHoaDonNhap(thang, nam);
 
             dtgvDanhSachHoaDonNhap.DataSource = danhSachHoaDonNhap;
-            lblTongTienNhap.Text = HoaDonBLL.Instance.LayTongTienNhap(thang, nam).ToString();
+            lblTongTienNhap.Text = HoaDonBLL.Instance.LayTongTienNhap(thang, nam).ToString("#,### đ");
         }
 
         private void LoadSanPhamBanChayNhat()
@@ -120,6 +120,56 @@ namespace GUI.QuanTri
             Hide();
             new frmQuanTri().ShowDialog();
             this.Close();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
