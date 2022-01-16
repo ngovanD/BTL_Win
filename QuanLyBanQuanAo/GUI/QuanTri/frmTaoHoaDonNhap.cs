@@ -100,25 +100,29 @@ namespace GUI.QuanTri
 
         private void dgvChiTietHoaDon_SelectionChanged(object sender, EventArgs e)
         {
-            var maSP = Convert.ToInt32(dgvChiTietHoaDon.CurrentRow.Cells["MaSP"].Value);
-            var idKichThuc = Convert.ToInt32(dgvChiTietHoaDon.CurrentRow.Cells["MaKT"].Value);
-
-            DongHoaDon ctsp = HoaDonBLL.Instance.LayChiTietHDTheoMaSPVaKichThuoc(maSP, idKichThuc);
-
-            if (ctsp != null)
+            try
             {
-                txtMaSP.Text = ctsp.MaSanPham.ToString();
-                txtTenSP.Text = ctsp.SanPham.TenSanPham;
-                txtLoaiSP.Text = ctsp.SanPham.LoaiSanPham.TenLoaiSanPham;
-                txtGiaNhap.Text = string.Format("{0:#,### đ}", ctsp.SanPham.DonGiaNhap);
-                cbxSize.SelectedValue = ctsp.ID_KichThuoc;
-                nudSLNhap.Value = Convert.ToInt32(ctsp.SoLuong);
-            }
+                var maSP = Convert.ToInt32(dgvChiTietHoaDon.CurrentRow.Cells["MaSP"].Value);
+                var idKichThuc = Convert.ToInt32(dgvChiTietHoaDon.CurrentRow.Cells["MaKT"].Value);
 
-            nudSLNhap.Enabled = true;
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
-            dgvDSSanPham.ClearSelection();
+                DongHoaDon ctsp = HoaDonBLL.Instance.LayChiTietHDTheoMaSPVaKichThuoc(maSP, idKichThuc);
+
+                if (ctsp != null)
+                {
+                    txtMaSP.Text = ctsp.MaSanPham.ToString();
+                    txtTenSP.Text = ctsp.SanPham.TenSanPham;
+                    txtLoaiSP.Text = ctsp.SanPham.LoaiSanPham.TenLoaiSanPham;
+                    txtGiaNhap.Text = string.Format("{0:#,### đ}", ctsp.SanPham.DonGiaNhap);
+                    cbxSize.SelectedValue = ctsp.ID_KichThuoc;
+                    nudSLNhap.Value = Convert.ToInt32(ctsp.SoLuong);
+                }
+
+                nudSLNhap.Enabled = true;
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+                dgvDSSanPham.ClearSelection();
+            }
+            catch (Exception) { }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -145,7 +149,7 @@ namespace GUI.QuanTri
 
                 //Hiển thị lại ban đầu
                 HoaDonBLL.Instance.CapNhatChiTietHoaDon(dgvChiTietHoaDon, 0, 0, 0, 3);
-                lblMaHoaDon.Text = lblMaHoaDon.Text = HoaDonBLL.Instance.TaoMaHoaDon(true);
+                lblMaHoaDon.Text = lblMaHoaDon.Text = HoaDonBLL.Instance.TaoMaHoaDon(false);
                 CapNhatTienHang();
                 dgvDSSanPham.ClearSelection();
                 HienThiMacDinh();

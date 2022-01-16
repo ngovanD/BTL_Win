@@ -14,7 +14,7 @@ namespace BLL
         private static HoaDonBLL instance;
         private List<DongHoaDon> chiTietHoaDon;
         private decimal tienHang = 0;
-        private decimal giamGia = 0;
+        private KhuyenMai khuyenMai = null;
         private decimal khachTra = 0;
         private bool loaiHDAdmin = false;
 
@@ -124,7 +124,7 @@ namespace BLL
         }
 
         public decimal TienHang { get { return tienHang; } }
-        public decimal GiamGia { get { return giamGia; } }
+        public KhuyenMai KhuyenMai { get { return khuyenMai; } }
         public decimal KhachTra { get { return khachTra; } set { this.khachTra = value; } }
 
         public String TaoMaHoaDon(bool kiemTra)
@@ -146,20 +146,22 @@ namespace BLL
 
         public void HienThiSanPham(DataGridView dgv, string tenSP, int maLoaiSP)
         {
-            List<SanPham> dsNV = new List<SanPham>();
+            List<SanPham> dsSP = new List<SanPham>();
+            List<ChiTietSanPham> dsCTSP = ChiTietSanPhamDAL.Instance.LayToanBo();
+
             if (isEmpty(tenSP) && maLoaiSP == 0)
             {
-                dsNV = SanPhamDAL.Instance.LayToanBo();
+                dsSP = SanPhamDAL.Instance.LayToanBo();
             }
             else
             {
                 if (isEmpty(tenSP)) tenSP = null;
-                dsNV = SanPhamDAL.Instance.LayTheoTuKhoa(tenSP, maLoaiSP);
+                dsSP = SanPhamDAL.Instance.LayTheoTuKhoa(tenSP, maLoaiSP);
             }
 
             if (loaiHDAdmin)
             {
-                dgv.DataSource = dsNV.Select(sp => new
+                dgv.DataSource = dsSP.Select(sp => new
                 {
                     sp.MaSanPham,
                     sp.TenSanPham,
@@ -169,11 +171,11 @@ namespace BLL
             }
             else
             {
-                dgv.DataSource = dsNV.Select(sp => new
+                dgv.DataSource = dsSP.Select(sp => new
                 {
                     sp.MaSanPham,
                     sp.TenSanPham,
-                    SoLuongCo = sp.ChiTietSanPhams.Sum(ctsp => ctsp.SoLuongCon),
+                    SoLuongCo = dsCTSP.Where(ctsp => ctsp.MaSanPham == sp.MaSanPham).Sum(ctsp => ctsp.SoLuongCon),
                     LoaiSanPham = sp.LoaiSanPham.TenLoaiSanPham,
                     sp.DonGiaBan,
                 }).ToList();
@@ -191,6 +193,27 @@ namespace BLL
             cbxLocLoaiSP.DataSource = data;
             cbxLocLoaiSP.ValueMember = "MaLoaiSanPham";
             cbxLocLoaiSP.DisplayMember = "TenLoaiSanPham";
+        }
+
+        public int kiemTraKhuyenMai(string maGiamGia)
+        {
+            DateTime dateTime = DateTime.Today;
+
+            List<KhuyenMai> dsKM = KhuyenMaiDAL.Instance.TimKhuyenMaiTheoCode(maGiamGia);
+
+            KhuyenMai KM = dsKM.OrderByDescending(km => km.GiaTri).FirstOrDefault(km => km.HanSuDung > dateTime && km.SoLuongCon > 0);
+
+            if (KM == null)
+            {
+                khuyenMai = null;
+                return 0;
+            }
+            else
+            {
+                khuyenMai = KM;
+                return (int)KM.GiaTri;
+            }
+            throw new NotImplementedException();
         }
 
         public void HienThiKichThuc(List<ChiTietSanPham> chiTietSanPhams, ComboBox cbxSize)
@@ -278,7 +301,7 @@ namespace BLL
                 case 3:
                     chiTietHoaDon = new List<DongHoaDon>();
                     tienHang = 0;
-                    giamGia = 0;
+                    khuyenMai = null;
                     khachTra = 0;
                     break;
             }
@@ -317,12 +340,18 @@ namespace BLL
 
         public bool ThanhToanHoaDonBan(string maHD, string tenDangNhap)
         {
+            if(chiTietHoaDon == null || chiTietHoaDon.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             TaiKhoan tk = TaiKhoanDAL.Instance.LayTaiKhoan(tenDangNhap);
+            int giamGia = (int)((khuyenMai == null) ? 0 : khuyenMai.GiaTri);
             HoaDon hoaDon = new HoaDon()
             {
                 MaHoaDon = maHD,
                 ThoiGian = DateTime.Now,
-                GiamGia = Convert.ToInt32(giamGia),
+                GiamGia = giamGia,
                 TongTien = Convert.ToInt32(tienHang - giamGia),
                 ID = tk.ID
             };
@@ -336,16 +365,44 @@ namespace BLL
                 hoaDon.LoaiHoaDon = true;
             }
 
+            List<ChiTietSanPham> chiTietSanPhams = new List<ChiTietSanPham>();
+
             foreach (var cthd in chiTietHoaDon)
             {
-                cthd.MaHoaDon = maHD;
-                cthd.KichThuoc = null;
-                cthd.SanPham = null;
+                ChiTietSanPham ctsp = ChiTietSanPhamDAL.Instance.LayTheoMaSPMaKT(cthd.MaSanPham, cthd.ID_KichThuoc);
+
+                if (ctsp != null)
+                {
+                    cthd.MaHoaDon = maHD;
+                    cthd.KichThuoc = null;
+                    cthd.SanPham = null;
+
+                    if (loaiHDAdmin)
+                    {
+                        ctsp.SoLuongCon += cthd.SoLuong;
+                    }
+                    else
+                    {
+                        if (cthd.SoLuong < ctsp.SoLuongCon)
+                        {
+                            ctsp.SoLuongCon -= cthd.SoLuong;
+                        }
+                        else
+                        {
+                            string str = "Số lượng mua của sản phẩm '" + ctsp.SanPham.TenSanPham + "' size '" + ctsp.KichThuoc.Ten + "' không có đủ. Vui lòng nhập lại";
+                            MessageBox.Show(str, "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+
+                    chiTietSanPhams.Add(ctsp);
+                }
             }
 
             try
             {
                 HoaDonDAL.Instance.LuuHoaDon(hoaDon, chiTietHoaDon);
+                ChiTietSanPhamDAL.Instance.CapNhatDS(chiTietSanPhams);
 
                 return true;
             }

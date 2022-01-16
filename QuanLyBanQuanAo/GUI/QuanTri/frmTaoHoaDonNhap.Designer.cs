@@ -30,9 +30,9 @@ namespace GUI.QuanTri
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -130,9 +130,9 @@ namespace GUI.QuanTri
             // Column8
             // 
             this.Column8.DataPropertyName = "DonGiaNhap";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle25.Format = "#,### đ";
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "#,### đ";
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column8.HeaderText = "Đơn giá nhập";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
@@ -141,7 +141,7 @@ namespace GUI.QuanTri
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(217, 288);
+            this.btnXoa.Location = new System.Drawing.Point(218, 288);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(66, 33);
@@ -152,7 +152,7 @@ namespace GUI.QuanTri
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(123, 288);
+            this.btnSua.Location = new System.Drawing.Point(124, 288);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(66, 33);
@@ -171,7 +171,7 @@ namespace GUI.QuanTri
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(26, 288);
+            this.btnThem.Location = new System.Drawing.Point(27, 288);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(67, 33);
@@ -182,7 +182,7 @@ namespace GUI.QuanTri
             // 
             // nudSLNhap
             // 
-            this.nudSLNhap.Location = new System.Drawing.Point(106, 228);
+            this.nudSLNhap.Location = new System.Drawing.Point(107, 228);
             this.nudSLNhap.Margin = new System.Windows.Forms.Padding(2);
             this.nudSLNhap.Minimum = new decimal(new int[] {
             1,
@@ -201,7 +201,7 @@ namespace GUI.QuanTri
             // cbxSize
             // 
             this.cbxSize.FormattingEnabled = true;
-            this.cbxSize.Location = new System.Drawing.Point(106, 189);
+            this.cbxSize.Location = new System.Drawing.Point(107, 189);
             this.cbxSize.Margin = new System.Windows.Forms.Padding(2);
             this.cbxSize.Name = "cbxSize";
             this.cbxSize.Size = new System.Drawing.Size(62, 21);
@@ -242,7 +242,7 @@ namespace GUI.QuanTri
             this.groupBox4.Controls.Add(this.btnThoat);
             this.groupBox4.Controls.Add(this.btnThanhToan);
             this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Location = new System.Drawing.Point(394, 520);
+            this.groupBox4.Location = new System.Drawing.Point(452, 521);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
@@ -253,7 +253,7 @@ namespace GUI.QuanTri
             // txtTongTien
             // 
             this.txtTongTien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtTongTien.Location = new System.Drawing.Point(97, 26);
+            this.txtTongTien.Location = new System.Drawing.Point(116, 26);
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(164, 19);
@@ -261,7 +261,7 @@ namespace GUI.QuanTri
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(479, 22);
+            this.btnThoat.Location = new System.Drawing.Point(498, 22);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(74, 28);
@@ -272,7 +272,7 @@ namespace GUI.QuanTri
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Location = new System.Drawing.Point(327, 22);
+            this.btnThanhToan.Location = new System.Drawing.Point(346, 22);
             this.btnThanhToan.Margin = new System.Windows.Forms.Padding(2);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(74, 28);
@@ -284,7 +284,7 @@ namespace GUI.QuanTri
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 30);
+            this.label11.Location = new System.Drawing.Point(42, 30);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 13);
@@ -294,7 +294,7 @@ namespace GUI.QuanTri
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 230);
+            this.label10.Location = new System.Drawing.Point(18, 230);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 13);
@@ -323,7 +323,7 @@ namespace GUI.QuanTri
             this.tableLayoutPanel1.Controls.Add(this.label15, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblMaHoaDon, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label13, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(-34, 64);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 65);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(2);
@@ -348,7 +348,7 @@ namespace GUI.QuanTri
             // 
             // txtGiaNhap
             // 
-            this.txtGiaNhap.Location = new System.Drawing.Point(106, 149);
+            this.txtGiaNhap.Location = new System.Drawing.Point(107, 149);
             this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaNhap.Name = "txtGiaNhap";
             this.txtGiaNhap.ReadOnly = true;
@@ -357,7 +357,7 @@ namespace GUI.QuanTri
             // 
             // txtLoaiSP
             // 
-            this.txtLoaiSP.Location = new System.Drawing.Point(106, 109);
+            this.txtLoaiSP.Location = new System.Drawing.Point(107, 109);
             this.txtLoaiSP.Margin = new System.Windows.Forms.Padding(2);
             this.txtLoaiSP.Name = "txtLoaiSP";
             this.txtLoaiSP.ReadOnly = true;
@@ -366,7 +366,7 @@ namespace GUI.QuanTri
             // 
             // txtTenSP
             // 
-            this.txtTenSP.Location = new System.Drawing.Point(106, 70);
+            this.txtTenSP.Location = new System.Drawing.Point(107, 70);
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.ReadOnly = true;
@@ -375,7 +375,7 @@ namespace GUI.QuanTri
             // 
             // txtMaSP
             // 
-            this.txtMaSP.Location = new System.Drawing.Point(106, 33);
+            this.txtMaSP.Location = new System.Drawing.Point(107, 33);
             this.txtMaSP.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.ReadOnly = true;
@@ -385,7 +385,7 @@ namespace GUI.QuanTri
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 192);
+            this.label9.Location = new System.Drawing.Point(21, 192);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(27, 13);
@@ -395,9 +395,9 @@ namespace GUI.QuanTri
             // Column10
             // 
             this.Column10.DataPropertyName = "ThanhTien";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle26.Format = "#,### đ";
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "#,### đ";
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column10.HeaderText = "Thành tiền";
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
@@ -407,7 +407,7 @@ namespace GUI.QuanTri
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-34, 23);
+            this.label1.Location = new System.Drawing.Point(24, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1096, 37);
@@ -418,7 +418,7 @@ namespace GUI.QuanTri
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 152);
+            this.label8.Location = new System.Drawing.Point(18, 152);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(71, 13);
@@ -432,7 +432,7 @@ namespace GUI.QuanTri
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtTKTenSP);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(-34, 135);
+            this.groupBox1.Location = new System.Drawing.Point(24, 136);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -491,9 +491,9 @@ namespace GUI.QuanTri
             // Column4
             // 
             this.Column4.DataPropertyName = "DonGiaNhap";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle27.Format = "#,### đ";
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "#,### đ";
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column4.HeaderText = "Đơn giá nhập";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
@@ -503,7 +503,7 @@ namespace GUI.QuanTri
             // cbxLocLoaiSP
             // 
             this.cbxLocLoaiSP.FormattingEnabled = true;
-            this.cbxLocLoaiSP.Location = new System.Drawing.Point(88, 23);
+            this.cbxLocLoaiSP.Location = new System.Drawing.Point(94, 23);
             this.cbxLocLoaiSP.Margin = new System.Windows.Forms.Padding(2);
             this.cbxLocLoaiSP.Name = "cbxLocLoaiSP";
             this.cbxLocLoaiSP.Size = new System.Drawing.Size(102, 21);
@@ -513,7 +513,7 @@ namespace GUI.QuanTri
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(204, 26);
+            this.label3.Location = new System.Drawing.Point(210, 26);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
@@ -522,7 +522,7 @@ namespace GUI.QuanTri
             // 
             // txtTKTenSP
             // 
-            this.txtTKTenSP.Location = new System.Drawing.Point(295, 24);
+            this.txtTKTenSP.Location = new System.Drawing.Point(301, 24);
             this.txtTKTenSP.Margin = new System.Windows.Forms.Padding(2);
             this.txtTKTenSP.Name = "txtTKTenSP";
             this.txtTKTenSP.Size = new System.Drawing.Size(113, 20);
@@ -532,7 +532,7 @@ namespace GUI.QuanTri
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 26);
+            this.label2.Location = new System.Drawing.Point(11, 26);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
@@ -556,7 +556,7 @@ namespace GUI.QuanTri
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(394, 135);
+            this.groupBox2.Location = new System.Drawing.Point(452, 136);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -568,7 +568,7 @@ namespace GUI.QuanTri
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 112);
+            this.label7.Location = new System.Drawing.Point(18, 112);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 13);
@@ -578,7 +578,7 @@ namespace GUI.QuanTri
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 73);
+            this.label6.Location = new System.Drawing.Point(18, 73);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 13);
@@ -588,7 +588,7 @@ namespace GUI.QuanTri
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 36);
+            this.label5.Location = new System.Drawing.Point(18, 36);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
@@ -622,7 +622,7 @@ namespace GUI.QuanTri
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvChiTietHoaDon);
-            this.groupBox3.Location = new System.Drawing.Point(703, 135);
+            this.groupBox3.Location = new System.Drawing.Point(761, 136);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
@@ -635,7 +635,7 @@ namespace GUI.QuanTri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1147, 609);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);

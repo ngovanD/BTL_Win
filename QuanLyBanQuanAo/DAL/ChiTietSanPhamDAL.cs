@@ -28,5 +28,28 @@ namespace DAL
         {
             return db.ChiTietSanPhams.Where(ctsp => ctsp.MaSanPham == maSP).ToList();
         }
+
+        public ChiTietSanPham LayTheoMaSPMaKT(int maSP, int maKT)
+        {
+            return db.ChiTietSanPhams.FirstOrDefault(ctsp => ctsp.MaSanPham == maSP && ctsp.ID_KichThuoc == maKT);
+        }
+
+        public void CapNhatDS(List<ChiTietSanPham> chiTietSanPhams)
+        {
+            foreach(var ctsp in chiTietSanPhams)
+            {
+                ChiTietSanPham chiTietSanPham = LayTheoMaSPMaKT(ctsp.MaSanPham, ctsp.ID_KichThuoc);
+                if (chiTietSanPham != null)
+                {
+                    chiTietSanPham.SoLuongCon = ctsp.SoLuongCon;
+                    db.SaveChanges();
+                }
+            }
+        }
+
+        public List<ChiTietSanPham> LayToanBo()
+        {
+            return db.ChiTietSanPhams.ToList();
+        }
     }
 }

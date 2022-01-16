@@ -152,7 +152,25 @@ namespace GUI.NhanVien
 
         private void btnApDung_Click(object sender, EventArgs e)
         {
+            string maGiamGia = txtMaGiamGia.Text;
+            if (maGiamGia.Trim().Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhập mã giảm giá nếu có", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int giaTri = HoaDonBLL.Instance.kiemTraKhuyenMai(maGiamGia);
+                if (giaTri != 0)
+                {
+                    MessageBox.Show("Hóa đơn này được giảm: " + string.Format("{0:#,### đ}", giaTri), "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Mã giảm giá này không có hoặc đã bị hết hạn", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
+                CapNhatTienHang();
+            }
         }
 
         private void txtTienKhachTra_TextChanged(object sender, EventArgs e)
@@ -195,6 +213,7 @@ namespace GUI.NhanVien
                 lblMaHoaDon.Text = lblMaHoaDon.Text = HoaDonBLL.Instance.TaoMaHoaDon(true);
                 CapNhatTienHang();
                 txtTienKhachTra.Text = HoaDonBLL.Instance.TienHang.ToString();
+                HoaDonBLL.Instance.HienThiSanPham(dgvDanhSachSanPham, null, 0);
                 dgvDanhSachSanPham.ClearSelection();
                 HienThiMacDinh();
             }
@@ -210,7 +229,11 @@ namespace GUI.NhanVien
         private void CapNhatTienHang()
         {
             var tienHang = HoaDonBLL.Instance.TienHang;
-            var giamGia = HoaDonBLL.Instance.GiamGia;
+            var giamGia = 0;
+            if (HoaDonBLL.Instance.KhuyenMai != null)
+            {
+                giamGia = (int)HoaDonBLL.Instance.KhuyenMai.GiaTri;
+            }
             var tongTien = tienHang - giamGia;
             var khachTra = HoaDonBLL.Instance.KhachTra;
             var tienThua = khachTra - tongTien;
