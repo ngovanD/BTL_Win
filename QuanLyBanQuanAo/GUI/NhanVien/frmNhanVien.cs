@@ -44,7 +44,7 @@ namespace GUI
         private void lịchSửTạoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
-            new QuanTri.frmXemThongTinHoaDonBan().ShowDialog();
+            new QuanTri.frmXemThongTinHoaDonBan(tenDangNhap).ShowDialog();
             Close();
         }
     }
