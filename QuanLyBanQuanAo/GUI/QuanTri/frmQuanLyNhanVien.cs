@@ -154,6 +154,7 @@ namespace GUI.QuanTri
                 {
                     nv.LuongCoBanNgay = Convert.ToInt32(txtLuongCoBanNgay.Text);
                     NhanVienBLL.Instance.CapNhatNhanVien(nv, 2);
+                    LuongBLL.Instance.CapNhatLuongCoBan((int)nv.IdTK, (int)nv.LuongCoBanNgay);
                     MessageBox.Show("Cập nhật nhân viên thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     HienThiMacDinh(true, false);

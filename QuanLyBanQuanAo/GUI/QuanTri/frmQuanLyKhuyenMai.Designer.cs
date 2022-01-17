@@ -29,10 +29,15 @@ namespace GUI.QuanTri
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvDanhSachKhuyenMai = new System.Windows.Forms.DataGridView();
+            this.MaKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongCon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HanSuDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,11 +53,6 @@ namespace GUI.QuanTri
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpHanSuDung = new System.Windows.Forms.DateTimePicker();
-            this.MaKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongCon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HanSuDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachKhuyenMai)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +70,46 @@ namespace GUI.QuanTri
             this.dtgvDanhSachKhuyenMai.Size = new System.Drawing.Size(621, 194);
             this.dtgvDanhSachKhuyenMai.TabIndex = 16;
             this.dtgvDanhSachKhuyenMai.SelectionChanged += new System.EventHandler(this.dtgvDanhSachKhuyenMai_SelectionChanged);
+            // 
+            // MaKhuyenMai
+            // 
+            this.MaKhuyenMai.DataPropertyName = "MaKhuyenMai";
+            this.MaKhuyenMai.HeaderText = "Mã khuyến mại";
+            this.MaKhuyenMai.Name = "MaKhuyenMai";
+            this.MaKhuyenMai.Width = 125;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.Width = 150;
+            // 
+            // GiaTri
+            // 
+            this.GiaTri.DataPropertyName = "GiaTri";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "#,### đ";
+            this.GiaTri.DefaultCellStyle = dataGridViewCellStyle4;
+            this.GiaTri.HeaderText = "Giá trị";
+            this.GiaTri.Name = "GiaTri";
+            // 
+            // SoLuongCon
+            // 
+            this.SoLuongCon.DataPropertyName = "SoLuongCon";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SoLuongCon.DefaultCellStyle = dataGridViewCellStyle5;
+            this.SoLuongCon.HeaderText = "Số lượng còn";
+            this.SoLuongCon.Name = "SoLuongCon";
+            // 
+            // HanSuDung
+            // 
+            this.HanSuDung.DataPropertyName = "HanSuDung";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Format = "dd/MM/yyyy";
+            this.HanSuDung.DefaultCellStyle = dataGridViewCellStyle6;
+            this.HanSuDung.HeaderText = "Hạn sử dụng";
+            this.HanSuDung.Name = "HanSuDung";
             // 
             // btnXoa
             // 
@@ -169,6 +209,7 @@ namespace GUI.QuanTri
             this.txtGiaTri.Name = "txtGiaTri";
             this.txtGiaTri.Size = new System.Drawing.Size(234, 20);
             this.txtGiaTri.TabIndex = 11;
+            this.txtGiaTri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaTri_KeyPress);
             // 
             // txtSoLuongCon
             // 
@@ -176,6 +217,7 @@ namespace GUI.QuanTri
             this.txtSoLuongCon.Name = "txtSoLuongCon";
             this.txtSoLuongCon.Size = new System.Drawing.Size(234, 20);
             this.txtSoLuongCon.TabIndex = 20;
+            this.txtSoLuongCon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuongCon_KeyPress);
             // 
             // label4
             // 
@@ -203,46 +245,6 @@ namespace GUI.QuanTri
             this.dtpHanSuDung.Name = "dtpHanSuDung";
             this.dtpHanSuDung.Size = new System.Drawing.Size(99, 20);
             this.dtpHanSuDung.TabIndex = 22;
-            // 
-            // MaKhuyenMai
-            // 
-            this.MaKhuyenMai.DataPropertyName = "MaKhuyenMai";
-            this.MaKhuyenMai.HeaderText = "Mã khuyến mại";
-            this.MaKhuyenMai.Name = "MaKhuyenMai";
-            this.MaKhuyenMai.Width = 125;
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Code";
-            this.Code.Name = "Code";
-            this.Code.Width = 150;
-            // 
-            // GiaTri
-            // 
-            this.GiaTri.DataPropertyName = "GiaTri";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "#,### đ";
-            this.GiaTri.DefaultCellStyle = dataGridViewCellStyle1;
-            this.GiaTri.HeaderText = "Giá trị";
-            this.GiaTri.Name = "GiaTri";
-            // 
-            // SoLuongCon
-            // 
-            this.SoLuongCon.DataPropertyName = "SoLuongCon";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SoLuongCon.DefaultCellStyle = dataGridViewCellStyle2;
-            this.SoLuongCon.HeaderText = "Số lượng còn";
-            this.SoLuongCon.Name = "SoLuongCon";
-            // 
-            // HanSuDung
-            // 
-            this.HanSuDung.DataPropertyName = "HanSuDung";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            this.HanSuDung.DefaultCellStyle = dataGridViewCellStyle3;
-            this.HanSuDung.HeaderText = "Hạn sử dụng";
-            this.HanSuDung.Name = "HanSuDung";
             // 
             // frmQuanLyKhuyenMai
             // 

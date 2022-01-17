@@ -48,5 +48,10 @@ namespace BLL
         {
             LuongDAL.Instance.CapNhatThuong(id, (int)tongTien);
         }
+
+        public void CapNhatLuongCoBan(int idTk, int LuongCoBan)
+        {
+            LuongDAL.Instance.CapNhatLuongCoBan(idTk, (int)LuongCoBan);
+        }
     }
 }

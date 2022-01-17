@@ -47,5 +47,10 @@ namespace BLL
         {
             return KhuyenMaiDAL.Instance.TimKhuyenMaiTheoCode(code);
         }
+
+        public bool CheckCode(string code)
+        {
+            return KhuyenMaiDAL.Instance.CheckCode(code);
+        }
     }
 }

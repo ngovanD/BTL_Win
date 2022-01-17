@@ -80,3 +80,4 @@ D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DTO\obj\Debug\DTO.csproj.CoreC
 D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DTO\obj\Debug\DTO.csproj.CopyComplete
 D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DTO\obj\Debug\DTO.exe
 D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DTO\obj\Debug\DTO.pdb
+F:\Download\Homework\ki7\LapTrinhWindow\BTL_NEWWWW\BTL_Win\QuanLyBanQuanAo\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache

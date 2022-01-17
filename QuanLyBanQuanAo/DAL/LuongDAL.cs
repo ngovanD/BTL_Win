@@ -104,5 +104,19 @@ namespace DAL
             db.SaveChanges();
 
         }
+
+        public void CapNhatLuongCoBan(int idTk, int LuongCoBan)
+        {
+            var nhanVien = (from nv in db.NhanViens
+                            where nv.IdTK == idTk
+                            select nv).FirstOrDefault();
+            var luong = (from l in db.Luongs
+                         where l.MaNhanVien == nhanVien.ID && l.ThangNam.Value.Month == DateTime.Now.Month && l.ThangNam.Value.Year == DateTime.Now.Year
+                         select l).FirstOrDefault();
+
+            luong.LuongCoBanNgay = LuongCoBan;
+
+            db.SaveChanges();
+        }
     }
 }

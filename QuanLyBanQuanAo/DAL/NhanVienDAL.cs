@@ -76,6 +76,8 @@ namespace DAL
                 db.NhanViens.Remove(nv);
                 db.TaiKhoans.Remove(tk);
             }
+
+
             db.SaveChanges();
         }
 

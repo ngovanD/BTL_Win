@@ -47,6 +47,20 @@ namespace DAL
             db.SaveChanges();
         }
 
+        public bool CheckCode(string code)
+        {
+            var khuyenMai = db.KhuyenMais.Where(k => k.Code == code).FirstOrDefault();
+
+            if(khuyenMai != null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         public void XoaKhuyenMai(int maKhuyenMai)
         {
             var khuyenMaiCanXoa = db.KhuyenMais.Where(k => k.MaKhuyenMai == maKhuyenMai).FirstOrDefault();

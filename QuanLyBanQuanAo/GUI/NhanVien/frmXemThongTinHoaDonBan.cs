@@ -93,7 +93,7 @@ namespace GUI.QuanTri
 
         private void thoiGian_ValueChanged(object sender, EventArgs e)
         {
-            DateTime bd = DateTime.Parse(dtpBatDau.Value.ToString("dd/MM/yyyy"));
+            DateTime bd = DateTime.Parse(dtpBatDau.Value.ToString("dd/MM/yyyy")+ " 00:00:00");
             DateTime kt = DateTime.Parse(dtpKetThuc.Value.ToString("dd/MM/yyyy") + " 23:59:59");
             if (kt >= bd)
             {

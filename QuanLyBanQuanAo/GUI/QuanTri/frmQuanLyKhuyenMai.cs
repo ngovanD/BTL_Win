@@ -50,6 +50,12 @@ namespace GUI.QuanTri
             khuyenMai.SoLuongCon = int.Parse(txtSoLuongCon.Text);
             khuyenMai.HanSuDung = dtpHanSuDung.Value;
 
+            if(!KhuyenMaiBLL.Instance.CheckCode(khuyenMai.Code))
+            {
+                MessageBox.Show("Mã code đã tồn tại");
+                return;
+            }    
+
             try
             {
                 KhuyenMaiBLL.Instance.ThemKhuyenMai(khuyenMai);
@@ -131,6 +137,32 @@ namespace GUI.QuanTri
 
             List<KhuyenMai> danhSachKhuyenMai = KhuyenMaiBLL.Instance.TimKhuyenMaiTheoCode(txtCode.Text);
             dtgvDanhSachKhuyenMai.DataSource = danhSachKhuyenMai;
+        }
+
+        private void txtGiaTri_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSoLuongCon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
