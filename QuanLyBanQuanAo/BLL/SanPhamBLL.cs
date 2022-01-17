@@ -46,6 +46,7 @@ namespace BLL
         public void HienThiDanhSach(DataGridView dgv, int maLoaiSP, string tkTenSP)
         {
             List<SanPham> dsSanPham = new List<SanPham>();
+            List<ChiTietSanPham> dsCTSP = ChiTietSanPhamDAL.Instance.LayToanBo();
             //maLoaiSP = 0, tkTenSP = null => Lấy toàn bộ
             if (isEmpty(tkTenSP) && maLoaiSP == 0)
             {
@@ -62,7 +63,7 @@ namespace BLL
                 sp.MaSanPham, 
                 sp.TenSanPham, 
                 LoaiSP = sp.LoaiSanPham.TenLoaiSanPham,
-                SoLuongCo = sp.ChiTietSanPhams.Sum(ctsp => ctsp.SoLuongCon),
+                SoLuongCo = dsCTSP.Where(ctsp => ctsp.MaSanPham == sp.MaSanPham).Sum(ctsp => ctsp.SoLuongCon),
                 sp.DonGiaBan, 
                 sp.DonGiaNhap 
             }).ToList();

@@ -384,8 +384,27 @@ namespace BLL
                             return false;
                         }
                     }
-
                     chiTietSanPhams.Add(ctsp);
+                }
+                else
+                {
+                    if (loaiHDAdmin)
+                    {
+                        ChiTietSanPham chiTietSanPham = new ChiTietSanPham() { ID_KichThuoc = cthd.ID_KichThuoc, MaSanPham = cthd.MaSanPham, SoLuongCon = cthd.SoLuong };
+                        try
+                        {
+                            ChiTietSanPhamDAL.Instance.TaoChiTietSP(chiTietSanPham);
+                            cthd.MaHoaDon = maHD;
+                            cthd.KichThuoc = null;
+                            cthd.SanPham = null;
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                            return false;
+                        }
+                    }
                 }
             }
 
@@ -399,7 +418,10 @@ namespace BLL
                     KhuyenMaiDAL.Instance.SuaKhuyenMai(khuyenMai);
                 }
 
+                if (!loaiHDAdmin)
+                {
                 LuongBLL.Instance.CapNhatThuong(tk.ID, hoaDon.TongTien);
+                }
 
                 return true;
             }

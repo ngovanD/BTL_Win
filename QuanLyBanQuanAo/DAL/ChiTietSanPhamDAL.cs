@@ -51,5 +51,11 @@ namespace DAL
         {
             return db.ChiTietSanPhams.ToList();
         }
+
+        public void TaoChiTietSP(ChiTietSanPham chiTietSanPham)
+        {
+            db.ChiTietSanPhams.Add(chiTietSanPham);
+            db.SaveChanges();
+        }
     }
 }

@@ -145,7 +145,7 @@ namespace GUI.QuanTri
         {
             if (HoaDonBLL.Instance.ThanhToanHoaDonBan(lblMaHoaDon.Text, "Admin"))
             {
-                MessageBox.Show("Thêm sản phẩm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Tạo thành công hóa đơn nhập", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //Hiển thị lại ban đầu
                 HoaDonBLL.Instance.CapNhatChiTietHoaDon(dgvChiTietHoaDon, 0, 0, 0, 3);

@@ -88,3 +88,17 @@ F:\Download\Homework\ki7\LapTrinhWindow\BTL_NEWWWW\BTL_Win\QuanLyBanQuanAo\DAL\o
 F:\Download\Homework\ki7\LapTrinhWindow\BTL_NEWWWW\BTL_Win\QuanLyBanQuanAo\DAL\obj\Debug\DAL.csproj.CopyComplete
 F:\Download\Homework\ki7\LapTrinhWindow\BTL_NEWWWW\BTL_Win\QuanLyBanQuanAo\DAL\obj\Debug\DAL.exe
 F:\Download\Homework\ki7\LapTrinhWindow\BTL_NEWWWW\BTL_Win\QuanLyBanQuanAo\DAL\obj\Debug\DAL.pdb
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\bin\Debug\DAL.exe.config
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\bin\Debug\DAL.exe
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\bin\Debug\DAL.pdb
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\bin\Debug\DTO.exe
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\bin\Debug\EntityFramework.dll
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\bin\Debug\DTO.pdb
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\bin\Debug\DTO.exe.config
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\bin\Debug\EntityFramework.xml
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\obj\Debug\DAL.exe
+D:\MONHOC\WINDOWS\BTL\BTL\BTL_Win\QuanLyBanQuanAo\DAL\obj\Debug\DAL.pdb
